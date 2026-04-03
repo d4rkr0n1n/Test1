@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cyberpunk DevOps Portfolio
+
+A high-fidelity, visually stunning cyberpunk-themed portfolio for Mridul Roy, specializing in DevOps, Kubernetes, and Cloud Infrastructures.
+
+This portfolio is built with the latest **Next.js** framework and features fully custom **Vanilla CSS** designs including neon glows, CRT scanlines, and animated text glitches.
+
+## Features
+
+- 👾 **Pure Cyberpunk Aesthetic:** Dark slate backgrounds mixed with neon cyan, magenta, and yellow.
+- 📺 **Retro-Hacker Terminal:** Boot sequence simulation that slowly prints out active DevOps modules.
+- ⚡ **Dynamic Routing:** Individual project pages statically generated to show architectural details and feature scopes.
+- 📱 **Fully Responsive:** Fluid layouts designed with CSS modules to provide an excellent experience on any screen size.
+- 🚀 **Next.js App Router:** Powered by Next.js ensuring optimal performance via zero-hydration Server Components where possible.
+
+## Tech Stack
+
+- **Framework:** [Next.js](https://nextjs.org/) (App Directory)
+- **Language:** TypeScript
+- **Styling:** Vanilla CSS Modules / Custom CSS Variables
+- **Fonts:** Share Tech Mono, Inter (via next/font/google)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+Make sure you have Node.js (Version 18+) installed.
 
+### Installation
+
+1. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Run the development server locally:
+   ```bash
+   npm run dev
+   ```
+
+3. Open [http://localhost:3000](http://localhost:3000) in your browser to see the outcome.
+
+## Deployment
+
+To create an optimized production build, run:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
 ```
+Then start the application with `npm start` or easily deploy it on [Vercel](https://vercel.com/new).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Structure
+- `/src/app` - Contains the main index and dynamic routing (`/project/[id]`).
+- `/src/components` - React components (`Hero`, `TerminalSkills`, `ProjectsMatrix`).
+- `/src/data` - Centralized mock JSON representation of data endpoints.

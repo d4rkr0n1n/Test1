@@ -1,0 +1,128 @@
+.heroSection {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 10%;
+  position: relative;
+  z-index: 10;
+}
+
+.container {
+  max-width: 800px;
+}
+
+.greeting {
+  color: var(--neon-cyan);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+  animation: glitch 5s linear infinite;
+}
+
+.title::before,
+.title::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+}
+
+.title::before {
+  left: 3px;
+  text-shadow: -2px 0 var(--neon-magenta);
+  clip: rect(24px, 550px, 90px, 0);
+  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+.title::after {
+  left: -3px;
+  text-shadow: -2px 0 var(--neon-cyan);
+  clip: rect(85px, 550px, 140px, 0);
+  animation: glitch-anim 2.5s infinite linear alternate-reverse;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--neon-yellow);
+  margin-bottom: 3rem;
+  letter-spacing: 1px;
+}
+
+.actions {
+  display: flex;
+  gap: 2rem;
+}
+
+.primaryButton {
+  background: transparent;
+  color: var(--neon-cyan);
+  border: 1px solid var(--neon-cyan);
+  padding: 1rem 2rem;
+  font-family: inherit;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.2), inset 0 0 10px rgba(0, 240, 255, 0);
+}
+
+.primaryButton:hover {
+  background: var(--neon-cyan);
+  color: var(--bg-color);
+  box-shadow: 0 0 20px var(--neon-cyan), inset 0 0 10px var(--bg-color);
+}
+
+.secondaryButton {
+  background: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 1rem 2rem;
+  font-family: inherit;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+  border-color: var(--neon-magenta);
+  color: var(--neon-magenta);
+  text-shadow: 0 0 5px var(--neon-magenta);
+}
+
+@keyframes glitch-anim {
+  0% { clip: rect(75px, 9999px, 83px, 0); }
+  20% { clip: rect(32px, 9999px, 14px, 0); }
+  40% { clip: rect(54px, 9999px, 48px, 0); }
+  60% { clip: rect(98px, 9999px, 3px, 0); }
+  80% { clip: rect(13px, 9999px, 92px, 0); }
+  100% { clip: rect(66px, 9999px, 15px, 0); }
+}
+
+@keyframes glitch-anim-2 {
+  0% { clip: rect(15px, 9999px, 86px, 0); }
+  20% { clip: rect(48px, 9999px, 2px, 0); }
+  40% { clip: rect(75px, 9999px, 19px, 0); }
+  60% { clip: rect(21px, 9999px, 58px, 0); }
+  80% { clip: rect(89px, 9999px, 31px, 0); }
+  100% { clip: rect(5px, 9999px, 66px, 0); }
+}
+
+@media (max-width: 768px) {
+  .title { font-size: 3rem; }
+  .subtitle { font-size: 1.2rem; }
+  .actions { flex-direction: column; }
+}

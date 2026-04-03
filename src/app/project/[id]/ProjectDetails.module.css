@@ -1,0 +1,137 @@
+.main {
+  min-height: 100vh;
+  padding: 4rem 10%;
+  font-family: monospace;
+  position: relative;
+  z-index: 10;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  padding: 3rem;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 240, 255, 0.05);
+}
+
+.backLink {
+  display: inline-block;
+  color: var(--neon-magenta);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.backLink:hover {
+  color: var(--neon-cyan);
+  text-shadow: 0 0 5px var(--neon-cyan);
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.status {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.status[data-status="ONLINE"],
+.status[data-status="ACTIVE"] {
+  color: var(--neon-cyan);
+}
+.status[data-status="OFFLINE"] {
+  color: var(--neon-magenta);
+}
+
+.title {
+  font-size: 3rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 5px rgba(0, 240, 255, 0.5);
+  font-family: var(--font-primary), monospace;
+  text-transform: uppercase;
+}
+
+.techStack {
+  color: var(--neon-yellow);
+  font-size: 1.1rem;
+}
+
+.divider {
+  height: 1px;
+  background: var(--border-color);
+  margin: 2rem 0;
+  position: relative;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 1px;
+  background: var(--neon-cyan);
+  box-shadow: 0 0 5px var(--neon-cyan);
+}
+
+.content {
+  margin-bottom: 3rem;
+}
+
+.longDesc {
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-family: var(--font-sans), sans-serif;
+  margin-bottom: 2.5rem;
+}
+
+.featuresTitle {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.featuresList {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.featuresList li {
+  color: #aaa;
+  margin-bottom: 0.8rem;
+  font-size: 1.05rem;
+  position: relative;
+}
+
+.featuresList li::before {
+  content: "»";
+  position: absolute;
+  left: -1.5rem;
+  color: var(--neon-magenta);
+}
+
+.footer {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.actionBtn {
+  background: transparent;
+  color: var(--neon-cyan);
+  border: 1px solid var(--neon-cyan);
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.actionBtn:hover {
+  background: var(--neon-cyan);
+  color: var(--bg-color);
+  box-shadow: 0 0 15px var(--neon-cyan), inset 0 0 5px var(--bg-color);
+}

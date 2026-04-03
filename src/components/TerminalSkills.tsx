@@ -34,7 +34,7 @@ const TerminalSkills: React.FC = () => {
   }, []);
 
   return (
-    <section className={styles.terminalSection}>
+    <section className={styles.terminalSection} id="skills">
       <div className={styles.terminalContainer}>
         <div className={styles.terminalHeader}>
           <div className={styles.headerDot} style={{ background: "var(--neon-magenta)" }}></div>

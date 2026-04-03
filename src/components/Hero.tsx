@@ -23,8 +23,12 @@ const Hero: React.FC = () => {
         </h1>
         <h2 className={styles.subtitle}>DevOps Engineer / Automation Specialist</h2>
         <div className={styles.actions}>
-          <button className={styles.primaryButton}>[ ENTER SYSTEM ]</button>
-          <button className={styles.secondaryButton}>VIEW_LOGS.sh</button>
+          <button className={styles.primaryButton} onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
+            [ ENTER SYSTEM ]
+          </button>
+          <button className={styles.secondaryButton} onClick={() => document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' })}>
+            VIEW_LOGS.sh
+          </button>
         </div>
       </div>
     </section>

@@ -90,3 +90,9 @@
   color: var(--neon-yellow);
   font-size: 0.9rem;
 }
+
+.cardLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
